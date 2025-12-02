@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Course Ordering System</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <header>
+    <h1>Course Ordering</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('courses')">Courses</a>
+      <a href="#" onclick="showPage('cart')">Cart</a>
+      <a href="#" onclick="showPage('login')" id="loginLink">Login</a>
+      <span id="welcomeUser"></span>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME PAGE -->
+    <section id="homePage">
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Upgrade your skills with <span>online courses</span>.</h2>
+          <p>Browse curated tech & business courses, add them to your cart, and simulate a complete ordering flow — perfect for your project demo.</p>
+
+          <div class="hero-badges">
+            <span class="badge">🔥 Trending topics</span>
+            <span class="badge">⚡ Fast checkout demo</span>
+            <span class="badge">👨‍🎓 Student friendly</span>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="showPage('courses')">
+              Browse Courses
+            </button>
+            <button class="btn btn-outline" onclick="showPage('cart')">
+              View Cart
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <span>
+              <strong>4</strong>
+              Demo courses
+            </span>
+            <span>
+              <strong>100%</strong>
+              Frontend project
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-illustration-wrap">
+            <!-- Replace this with any nice flat illustration -->
+            <img
+              class="hero-illustration"
+              src="https://t3.ftcdn.net/jpg/02/39/39/92/360_F_239399223_tthRTvt26El5ccmyQIck9ySsHKgX5YBo.jpg"
+              alt="Students learning online">
+          </div>
+          <span class="hero-tag">Flat illustration demo 🎨</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES PAGE -->
+    <section id="coursesPage" class="hidden">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Available Courses</h2>
+            <div class="section-subtitle">Choose any course and add it to your cart.</div>
+          </div>
+        </div>
+        <div id="courseList" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- CART PAGE -->
+    <section id="cartPage" class="hidden">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Your Cart</h2>
+            <div class="section-subtitle">Review your selected courses before checkout.</div>
+          </div>
+        </div>
+
+        <div id="cartItems" class="cart-list"></div>
+
+        <div class="cart-summary">
+          <span>Total amount</span>
+          <span><strong>₹<span id="cartTotal">0</span></strong></span>
+        </div>
+
+        <div style="margin-top: 14px; text-align: right;">
+          <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="hidden">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2>Login</h2>
+            <div class="section-subtitle">Use any username to simulate student login.</div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Student Login</h2>
+          <p>This is a demo login. Any username will work for the project.</p>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" id="username" placeholder="Enter your name">
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%;" onclick="loginUser()">Continue</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER WITH GROUP MEMBERS -->
+  <footer>
+    <div class="footer-title">Group Members</div>
+    <div class="footer-members">
+      <!-- Replace with your actual names and USNs -->
+      <div class="footer-member">Member 1 – USN: 1DS23CS001</div>
+      <div class="footer-member">Member 2 – USN: 1DS23CS002</div>
+      <div class="footer-member">Member 3 – USN: 1DS23CS003</div>
+      <div class="footer-member">Member 4 – USN: 1DS23CS004</div>
+    </div>
+    <div>Project: Online Course Ordering System</div>
+    <div>Department of CSE – Dayananda Sagar University</div>
+  </footer>
+
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
 
